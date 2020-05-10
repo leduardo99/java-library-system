@@ -97,7 +97,7 @@ public class BooksDao extends BaseDao<Books> {
         preparedStatement.setString(1, books.getTitle());
         preparedStatement.setInt(2, books.getPublisherId());
         preparedStatement.setFloat(3, books.getPrice());
-        preparedStatement.setFloat(4, books.getId());
+        preparedStatement.setInt(4, books.getId());
 
         preparedStatement.execute();
 

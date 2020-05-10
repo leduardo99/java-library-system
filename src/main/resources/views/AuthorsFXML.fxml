@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="330.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eluis.tk.fx.authors.AuthorsController">
+       <TableView fx:id="tblAuthors" layoutY="132.0" onMouseClicked="#onClickTableAuthor" prefHeight="200.0" prefWidth="600.0">
+           <columns>
+               <TableColumn fx:id="colIdAuthor" prefWidth="40.0" text="ID" />
+               <TableColumn fx:id="colNameAuhor" prefWidth="289.0" text="NOME" />
+               <TableColumn fx:id="colFNameAuthor" prefWidth="270.0" text="SOBRENOME" />
+           </columns>
+       </TableView>
+       <TextField fx:id="authorId" disable="true" layoutX="14.0" layoutY="44.0" prefHeight="25.0" prefWidth="85.0" promptText="ID" />
+       <TextField fx:id="authorName" disable="true" layoutX="106.0" layoutY="44.0" prefHeight="25.0" prefWidth="234.0" promptText="NOME" />
+       <TextField fx:id="authorFName" disable="true" layoutX="351.0" layoutY="44.0" prefHeight="25.0" prefWidth="235.0" promptText="SOBRENOME" />
+       <Button fx:id="btnDeleteAuthor" disable="true" layoutX="525.0" layoutY="89.0" mnemonicParsing="false" onAction="#handleDeleteAuthor" text="EXCLUIR" />
+       <Button fx:id="btnUpdateAuthor" disable="true" layoutX="454.0" layoutY="89.0" mnemonicParsing="false" onAction="#handleUpdateAuthor" prefHeight="25.0" prefWidth="65.0" text="EDITAR" />
+       <Button fx:id="btnNewAuthor" layoutX="380.0" layoutY="89.0" mnemonicParsing="false" onAction="#handleNewAuthor" prefHeight="25.0" prefWidth="65.0" text="NOVO" />
+   <Button fx:id="btnSubmitAuthor" disable="true" layoutX="14.0" layoutY="89.0" mnemonicParsing="false" onAction="#handleSubmitAuthor" prefHeight="25.0" prefWidth="145.0" text="CONFIRMAR" />
+   <ButtonBar prefHeight="40.0" prefWidth="606.0">
+     <buttons>
+       <Button fx:id="menuEditoras" mnemonicParsing="false" text="EDITORAS" />
+         <Button fx:id="menuLivros" layoutX="541.0" layoutY="18.0" mnemonicParsing="false" text="LIVROS" />
+     </buttons>
+   </ButtonBar>
+</AnchorPane>
