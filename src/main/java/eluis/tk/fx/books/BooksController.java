@@ -1,6 +1,7 @@
 package eluis.tk.fx.books;
 
 import eluis.tk.fx.authors.Authors;
+import eluis.tk.fx.publishers.Publishers;
 import eluis.tk.models.Books;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -175,6 +176,16 @@ public class BooksController implements Initializable {
 
             try {
                 new Authors().start(new Stage());
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        });
+
+        menuEditoras.setOnMouseClicked((MouseEvent e) -> {
+            eluis.tk.fx.books.Books.getStage().close();
+
+            try {
+                new Publishers().start(new Stage());
             } catch (Exception exception) {
                 exception.printStackTrace();
             }

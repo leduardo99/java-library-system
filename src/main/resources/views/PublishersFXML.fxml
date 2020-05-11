@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="332.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eluis.tk.fx.publishers.PublishersController">
+    <children>
+        <TableView fx:id="tblPublishers" layoutY="132.0" onMouseClicked="#onClickTable" prefHeight="200.0" prefWidth="660.0">
+            <columns>
+                <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="colNAME" prefWidth="343.0" text="NAME" />
+                <TableColumn fx:id="colURL" prefWidth="241.0" text="URL" />
+            </columns>
+        </TableView>
+        <TextField fx:id="name" disable="true" layoutX="96.0" layoutY="46.0" prefHeight="25.0" prefWidth="305.0" promptText="NAME" />
+        <ButtonBar prefHeight="40.0" prefWidth="660.0">
+            <buttons>
+                <Button fx:id="menuAutor" mnemonicParsing="false" onAction="#handleOpenAuthors" text="AUTOR" />
+                <Button fx:id="menuLivros" mnemonicParsing="false" onAction="#handleOpenBooks" text="LIVROS" />
+            </buttons>
+        </ButtonBar>
+        <Button fx:id="btnSubmit" disable="true" layoutX="14.0" layoutY="87.0" mnemonicParsing="false" onAction="#handleSubmit" prefHeight="25.0" prefWidth="117.0" text="CONFIRMAR" />
+        <Button fx:id="btnNew" layoutX="430.0" layoutY="87.0" mnemonicParsing="false" onAction="#handleNew" prefHeight="25.0" prefWidth="65.0" text="NOVO" />
+        <Button fx:id="btnUpdate" disable="true" layoutX="505.0" layoutY="87.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="25.0" prefWidth="65.0" text="EDITAR" />
+        <Button fx:id="btnDelete" disable="true" layoutX="580.0" layoutY="87.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="25.0" prefWidth="65.0" text="EXCLUIR" />
+        <TextField fx:id="id" disable="true" layoutX="14.0" layoutY="46.0" prefHeight="25.0" prefWidth="75.0" promptText="ID" />
+        <TextField fx:id="url" disable="true" layoutX="411.0" layoutY="46.0" prefHeight="25.0" prefWidth="234.0" promptText="URL" />
+    </children>
+</AnchorPane>

@@ -2,6 +2,7 @@ package eluis.tk.fx.authors;
 
 import eluis.tk.controllers.AuthorController;
 import eluis.tk.fx.books.Books;
+import eluis.tk.fx.publishers.Publishers;
 import eluis.tk.models.Author;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -50,14 +51,24 @@ public class AuthorsController implements Initializable {
                 exception.printStackTrace();
             }
         });
+
+        menuEditoras.setOnMouseClicked((MouseEvent e) -> {
+            Authors.getStage().close();
+
+            try {
+                new Publishers().start(new Stage());
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+        });
     }
 
     private void LoadTableAuthor() {
         InitializeData();
 
-        colIdAuthor.setCellValueFactory(new PropertyValueFactory<Author, Integer>("Id"));
-        colNameAuhor.setCellValueFactory(new PropertyValueFactory<Author, String>("Name"));
-        colFNameAuthor.setCellValueFactory(new PropertyValueFactory<Author, String>("FName"));
+        colIdAuthor.setCellValueFactory(new PropertyValueFactory<>("Id"));
+        colNameAuhor.setCellValueFactory(new PropertyValueFactory<>("Name"));
+        colFNameAuthor.setCellValueFactory(new PropertyValueFactory<>("FName"));
 
         tblAuthors.setItems(FXCollections.observableArrayList(authors));
     }
